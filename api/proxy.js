@@ -2,7 +2,7 @@
 export default async function handler(req, res) {
   const { category = "general" } = req.query;
 
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEWS_API_KEY}`;
+  const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.VITE_API_KEY}`;
 
   try {
     const response = await fetch(url, {
